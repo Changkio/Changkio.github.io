@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="常凯尧的个人作品页：地理信息、算法研发、AI 地图产品与研究。">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>常凯尧 · 个人作品</title>
+  <style>
+    :root{--paper:#f6f5ef;--ink:#223b31;--body:#39433e;--muted:#6b726c;--line:#d4d8ce;--accent:#315d48;--white:#fffef8}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:2rem}
+    body{margin:0;background:var(--paper);color:var(--body);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration-color:#a3b3a6;text-underline-offset:.28em;text-decoration-thickness:1px}
+    a:hover{text-decoration-color:var(--accent)}
+    a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+    .page{max-width:1060px;margin:auto;padding:0 48px}
+    .skip{position:absolute;left:18px;top:-80px;background:var(--white);padding:10px;z-index:2}
+    .skip:focus{top:12px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}
+    .signature{color:var(--ink);font-weight:650;letter-spacing:.12em;text-decoration:none;white-space:nowrap}
+    nav{display:flex;flex-wrap:wrap;gap:25px;font-size:14px}
+    nav a{text-decoration:none;color:var(--muted)}
+    nav a:hover{color:var(--ink)}
+    .intro{display:grid;grid-template-columns:1fr 220px;gap:70px;padding:76px 0 68px}
+    .eyebrow{margin:0 0 15px;color:var(--accent);font-size:13px;letter-spacing:.13em}
+    h1,h2,h3,p{margin-top:0}
+    h1{margin-bottom:20px;font-family:"Songti SC","Noto Serif CJK SC","SimSun",serif;font-size:52px;line-height:1.2;font-weight:500;letter-spacing:.08em;color:var(--ink)}
+    .lead{font-size:20px;line-height:1.8;color:var(--ink);margin-bottom:18px;max-width:590px}
+    .intro-copy{max-width:630px;margin-bottom:25px;color:var(--muted);font-size:15px}
+    .links{display:flex;flex-wrap:wrap;gap:12px 27px;font-size:14px}
+    .profile-note{align-self:start;margin-top:24px;border-left:1px solid var(--line);padding-left:25px;font-size:14px;color:var(--muted)}
+    .profile-note p{margin-bottom:22px}
+    .profile-note p:last-child{margin-bottom:0}
+    .note-label{display:block;color:var(--ink);font-size:12px;letter-spacing:.12em;margin-bottom:5px}
+    section{padding:42px 0 48px;border-top:1px solid var(--line)}
+    .section-heading{display:flex;align-items:baseline;gap:18px;margin-bottom:29px}
+    .section-number{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+    h2{font-size:22px;font-weight:550;letter-spacing:.06em;color:var(--ink);margin-bottom:0}
+    .project-head{display:flex;justify-content:space-between;gap:25px;align-items:baseline;margin-bottom:9px}
+    h3{font-size:21px;font-weight:600;line-height:1.55;color:var(--ink);margin-bottom:7px}
+    .date{white-space:nowrap;font-size:13px;color:var(--muted)}
+    .role{font-size:14px;color:var(--accent);margin-bottom:20px}
+    .project-summary{max-width:790px;margin-bottom:27px}
+    .work-columns{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+    .work-column h4{font-size:15px;letter-spacing:.05em;color:var(--ink);font-weight:600;margin:0 0 10px}
+    ul{margin:0;padding-left:1.1em}
+    li{padding-left:.15em;margin-bottom:10px;font-size:15px}
+    li::marker{color:#899b8c}
+    .milestone{margin:22px 0 20px;padding:14px 0 14px 18px;border-left:3px solid #849a81;font-size:14px;color:var(--ink)}
+    .milestone small{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+    .subproject{margin-top:36px;padding-top:27px;border-top:1px solid var(--line)}
+    .subproject h3{font-size:17px}
+    .subproject p{font-size:15px;margin-bottom:0;max-width:800px}
+    .education{display:grid;grid-template-columns:1fr 1fr;gap:45px;margin-bottom:30px}
+    .education-item{padding-left:17px;border-left:2px solid var(--line)}
+    .education-item h3{font-size:17px;margin-bottom:4px}
+    .education-item p{font-size:14px;margin-bottom:3px}
+    .muted{color:var(--muted)}
+    .paper{padding-top:26px;border-top:1px solid var(--line)}
+    .paper-label{font-size:12px;color:var(--accent);letter-spacing:.1em;margin-bottom:10px}
+    .paper h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:22px;line-height:1.5;max-width:800px;margin-bottom:13px}
+    .paper p{font-size:14px;max-width:790px;margin-bottom:12px}
+    .section-note{font-size:14px;color:var(--muted);max-width:810px;margin-top:-8px;margin-bottom:25px}
+    .repo{display:grid;grid-template-columns:205px 1fr auto;gap:27px;padding:23px 0;border-top:1px solid var(--line);align-items:start}
+    .repo h3{font-size:16px;margin:0;overflow-wrap:anywhere}
+    .repo p{font-size:14px;margin:0;color:var(--muted)}
+    .repo a{font-size:13px;white-space:nowrap;margin-top:2px}
+    .skills{font-size:14px;margin-top:26px;color:var(--muted)}
+    .skills strong{color:var(--ink);font-weight:500}
+    footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding:23px 0 35px;color:var(--muted);font-size:12px}
+    footer a{color:var(--muted)}
+    @media(max-width:760px){.page{padding:0 25px}.intro{grid-template-columns:1fr;gap:12px;padding:48px 0 38px}h1{font-size:43px}.lead{font-size:18px}.profile-note{margin-top:6px;display:flex;gap:35px;padding-left:17px}.profile-note p{margin-bottom:0}.work-columns,.education{grid-template-columns:1fr;gap:22px}.repo{grid-template-columns:1fr auto;gap:6px 16px}.repo p{grid-column:1/-1;grid-row:2}.repo a{grid-column:2;grid-row:1}.project-head{gap:12px}.project-head h3{font-size:19px}section{padding:31px 0 36px}.paper h3{font-size:20px}header{padding:22px 0;align-items:flex-start}nav{gap:15px;font-size:13px}.section-heading{margin-bottom:23px}}
+    @media(max-width:430px){.page{padding:0 20px}header{flex-direction:column;gap:13px}nav{gap:23px}.profile-note{gap:24px;font-size:13px}.project-head{flex-direction:column;gap:0}.date{margin-bottom:7px}.paper h3{font-size:18px}footer{flex-direction:column;gap:7px}.intro-copy{font-size:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body{background:#fff}.page{max-width:none;padding:0}header,nav,.skip{display:none}.intro{padding:20px 0 30px}section{break-inside:avoid;padding:24px 0}.repo{break-inside:avoid}a{color:inherit}.links a::after{content:" (" attr(href) ")";font-size:10px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳转到正文</a>
+  <div class="page">
+    <header>
+      <a class="signature" href="#main">常凯尧</a>
+      <nav aria-label="页面导航">
+        <a href="#projects">项目</a>
+        <a href="#research">教育与研究</a>
+        <a href="#learning">学习记录</a>
+        <a href="https://github.com/Changkio">GitHub ↗</a>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">地理信息 · 算法 · 产品</p>
+          <h1>常凯尧</h1>
+          <p class="lead">研究地理信息与生成式模型，<br>参与算法研发和产品实践。</p>
+          <p class="intro-copy">中山大学测绘工程硕士在读，信息与计算科学本科。参与美颜世界项目的算法研发，负责产品需求、市场与商业规划，希望把技术能力转化为可以使用的产品。</p>
+          <div class="links">
+            <a href="https://www.boluobi.com/">菠萝笔 · 已上线产品 ↗</a>
+            <a href="https://github.com/Changkio">代码与项目记录 ↗</a>
+          </div>
+        </div>
+        <aside class="profile-note" aria-label="个人信息">
+          <p><span class="note-label">目前</span>中山大学<br>测绘工程硕士在读</p>
+          <p><span class="note-label">关注</span>地理数据处理<br>扩散模型与地图表达<br>AI 产品开发</p>
+        </aside>
+      </div>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <div class="section-heading"><span class="section-number">01</span><h2 id="projects-heading">项目实践</h2></div>
+        <article>
+          <div class="project-head"><h3>美颜世界 · AI 地图生成与风格化</h3><span class="date">2023 — 至今</span></div>
+          <p class="role">联合创始人、算法总监 · 产品与市场主要负责人</p>
+          <p class="project-summary">在约 9 人的团队中，参与从算法探索到产品与商业化的推进。菠萝笔已上线，面向个人创作者提供地图风格化能力；菠萝轨迹已完成原型，探索轨迹内容的表达与分享。项目核心创意和算法大方向由导师提出，我与团队共同完成研发。</p>
+          <div class="work-columns">
+            <div class="work-column">
+              <h4>算法与开发</h4>
+              <ul>
+                <li>参与扩散模型微调与训练，承担地理数据处理、模型修改和训练工作；涉及公开遥感影像、地图、DEM 与 GeoJSON 等数据。</li>
+                <li>围绕地图艺术化过程中的空间结构正确性开展研发，采用分阶段处理思路控制结构误差。具体实现涉及商业保密。</li>
+                <li>参与部分 LOD 算法设计，结合课题组已有传统算法与深度学习方法，探索地图多尺度表达的效率与质量改进。</li>
+              </ul>
+            </div>
+            <div class="work-column">
+              <h4>产品与市场</h4>
+              <ul>
+                <li>负责 B 端与 C 端市场需求及盈利规划：B 端面向文旅公司和景区提供定制方案，C 端面向个人创作者与内容分享者。</li>
+                <li>主导产品定位与功能取舍，为拓展 C 端场景推动轨迹 App 原型；根据小样本测试反馈，调整风格模板的展示顺序。</li>
+                <li>独立完成商业计划书与路演材料并承担路演，参与制定面向大湾区与长三角的项目发展安排。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="milestone">2026 年“太湖杯”广州城市赛三等奖，获得决赛参赛资格。</div>
+          <div class="links"><a href="https://www.boluobi.com/">访问菠萝笔 ↗</a><a href="https://github.com/Changkio/boluobi-project-showcase">查看公开项目说明 ↗</a></div>
+        </article>
+        <article class="subproject">
+          <div class="project-head"><h3>对虾心率检测软件</h3><span class="date">2025.09 — 2025.10</span></div>
+          <p>基于 Python、OpenCV 与视觉检测方法完成科研辅助软件，参与视觉算法与软件实现。软件已用于生物实验室的具体实验；当前页面仅介绍项目经历，未公开实验数据与源代码。</p>
+        </article>
+      </section>
+
+      <section id="research" aria-labelledby="research-heading">
+        <div class="section-heading"><span class="section-number">02</span><h2 id="research-heading">教育与研究</h2></div>
+        <div class="education">
+          <div class="education-item"><h3>中山大学 · 测绘工程</h3><p>硕士在读</p><p class="muted">地理信息、遥感与地图表达相关研究</p></div>
+          <div class="education-item"><h3>中山大学 · 信息与计算科学</h3><p>本科</p><p class="muted">数学、计算方法与编程基础</p></div>
+        </div>
+        <article class="paper">
+          <p class="paper-label">已发表论文 · TGRS</p>
+          <h3 lang="en">A Texture-Preserving Simplification Method for Multiscale Representation of the Color Lakes Based on Remote Sensing Images</h3>
+          <p><em lang="en">IEEE Transactions on Geoscience and Remote Sensing</em> · 作者之一</p>
+          <p>参与深度学习模型的部署与改进，负责基线方法对比。研究涉及遥感影像中的彩色湖泊及其多尺度表达。</p>
+          <a href="https://doi.org/10.1109/TGRS.2026.3671481">论文 DOI ↗</a>
+        </article>
+        <p class="skills"><strong>工具与语言</strong>　Python、C++；有 MATLAB、R、Linux、Git 和 MySQL 使用经验，正在学习 Go。</p>
+      </section>
+
+      <section id="learning" aria-labelledby="learning-heading">
+        <div class="section-heading"><span class="section-number">03</span><h2 id="learning-heading">学习演示</h2></div>
+        <p class="section-note">下面三个仓库由 AI 生成，并在本次整理中通过 AI 辅助审查与测试。它们用于记录方法和学习过程，与上面的真实项目经历分开呈现，不是原课程作业、挑战杯研究代码或商业项目源码。</p>
+        <article class="repo"><h3>地理数据工具</h3><p>围绕地理数据处理的小型工具演示。实现范围、示例与限制见仓库说明。</p><a href="https://github.com/Changkio/geo-toolkit" aria-label="查看地理数据工具仓库">查看仓库 ↗</a></article>
+        <article class="repo"><h3>交通流量预测</h3><p>使用合成数据比较周季节基线、梯度提升与 ARIMA，练习时间切分、递归预测和误差评估。</p><a href="https://github.com/Changkio/traffic-flow-forecast" aria-label="查看交通流量预测仓库">查看仓库 ↗</a></article>
+        <article class="repo"><h3>CRITIC 与熵权法</h3><p>指标赋权方法的代码演示。用于学习计算流程，不包含原养老调研数据或挑战杯项目代码。</p><a href="https://github.com/Changkio/critic-entropy-weight" aria-label="查看CRITIC与熵权法仓库">查看仓库 ↗</a></article>
+      </section>
+    </main>
+    <footer><span>常凯尧 · 个人作品与学习记录</span><a href="https://github.com/Changkio">github.com/Changkio ↗</a></footer>
+  </div>
+</body>
+</html>
