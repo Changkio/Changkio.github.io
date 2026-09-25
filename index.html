@@ -58,6 +58,7 @@
     .education-item p{font-size:14px;margin-bottom:3px}
     .muted{color:var(--muted)}
     .paper{padding-top:26px;border-top:1px solid var(--line)}
+    .paper + .paper{margin-top:28px}
     .paper-label{font-size:12px;color:var(--accent);letter-spacing:.1em;margin-bottom:10px}
     .paper h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:22px;line-height:1.5;max-width:800px;margin-bottom:13px}
     .paper p{font-size:14px;max-width:790px;margin-bottom:12px}
@@ -151,6 +152,16 @@
           <p><em lang="en">IEEE Transactions on Geoscience and Remote Sensing</em> · 作者之一</p>
           <p>参与深度学习模型的部署与改进，负责基线方法对比。研究涉及遥感影像中的彩色湖泊及其多尺度表达。</p>
           <a href="https://doi.org/10.1109/TGRS.2026.3671481">论文 DOI ↗</a>
+        </article>
+        <article class="paper" id="map-stylization" aria-labelledby="map-stylization-title">
+          <p class="paper-label">研究稿 · <span lang="en">Research manuscript</span> · 2026</p>
+          <h3 id="map-stylization-title" lang="en">Geometry-Guided Attention Distillation for Structure-Aware Map Stylization</h3>
+          <p>利用道路与交叉口先验，对查询损失进行归一化加权；在冻结的注意力蒸馏（AD）与 SD1.5 模型中仅优化图像潜变量，研究地图结构保留与艺术风格迁移之间的权衡。</p>
+          <p>实验包含 12 幅测试地图与 3 幅固定艺术参考图，以及平移先验、仅道路先验的探索性对照。代码、输入数据、逐图结果和复现记录随研究稿一并归档。</p>
+          <div class="links">
+            <a href="https://github.com/Changkio/geometry-guided-map-stylization/blob/main/paper/main.pdf" aria-label="阅读几何引导地图风格化研究稿 PDF">研究稿 PDF ↗</a>
+            <a href="https://github.com/Changkio/geometry-guided-map-stylization" aria-label="查看几何引导地图风格化代码与实验复现档案">代码与实验复现档案 ↗</a>
+          </div>
         </article>
         <p class="skills"><strong>工具与语言</strong>　Python、C++；有 MATLAB、R、Linux、Git 和 MySQL 使用经验，正在学习 Go。</p>
       </section>
